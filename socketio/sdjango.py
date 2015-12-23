@@ -69,4 +69,7 @@ def socketio(request):
     return HttpResponse("")
 
 
-urls = patterns("", (r'', socketio))
+urlpatterns = [
+   url('^.*$', socketio, name='socketio')
+]
+# urls = patterns("", (r'', socketio))
